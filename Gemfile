@@ -29,10 +29,41 @@ gem 'jbuilder', '~> 2.5'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
-
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
-  gem 'byebug', platform: :mri
+  gem "rspec-json_matcher"
+  gem "pry-rails"
+  gem "pry-doc"
+  gem "pry-stack_explorer"
+  gem "pry-byebug"
+  gem "rspec-rails"
+  gem "capybara"
+  gem "factory_girl_rails"
+#  gem "capybara-webkit"
+  gem "database_cleaner"
+  gem "poltergeist"
+  gem "spring-commands-rspec"
+  gem "capybara-email"
+  gem "launchy"
+  gem "rb-fsevent", require: false
+  gem "terminal-notifier-guard"
+  gem "timecop"
+  gem "guard"
+  gem "guard-rubocop"
+  gem "guard-rspec"
+  gem 'capybara-screenshot'
+  gem 'webmock'
+  gem 'capistrano-npm'
+
+  gem 'dotenv-rails'
+
+# only for Mac
+  case RUBY_PLATFORM
+    when /darwin/
+      gem "debase"
+      gem 'ruby-debug-ide'
+    when /linux/
+  end
 end
 
 group :development do
@@ -50,5 +81,9 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'devise'
 gem 'cancancan'
 gem 'rolify'
+
 gem 'annotate'
+
+gem 'breadcrumbs_on_rails'
+
 gem 'simple_form'
