@@ -1,0 +1,7 @@
+<%= simple_form_for (@user) do |f| %>
+<%= f.input :name %>
+<%= f.input :email %>
+<%= f.collection_radio_buttons :roles, Role.all, :id, :name, {:checked => @user.roles.ids} %>
+<br>
+<%= f.button :submit %>
+<% end %>
