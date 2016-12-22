@@ -1,5 +1,7 @@
 class UsersController < ApplicationController
   load_and_authorize_resource
+  add_breadcrumb "Home", :root_path
+  add_breadcrumb "User", :users_path
 
   def index
     @users = User.all
