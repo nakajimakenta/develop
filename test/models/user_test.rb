@@ -16,6 +16,9 @@
 #  created_at             :datetime         not null
 #  updated_at             :datetime         not null
 #  name                   :string
+#  address                :string
+#  user_id                :string
+#  post_number            :integer
 #
 
 require 'test_helper'
