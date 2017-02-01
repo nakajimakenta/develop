@@ -5,9 +5,10 @@
 
   <div class="form-inputs">
     <%= f.input :name, required: true, autofocus: true %>
-    <%= f.input :user_id, required: true, autofocus: true %>
-    <%= f.input :post_number, autofocus: true %>
-    <%= f.input :address, autofocus: true %>
+    <%= f.input :post_number, autofocus: true, input_html:{id:"address_zipcode"} %>
+    <%= f.input :address_prefecture_name, autofocus: true, input_html:{id:"address_prefecture_name"} %>
+    <%= f.input :address_city, autofocus: true, input_html:{id:"address_city"} %>
+    <%= f.input :address_street, autofocus: true, input_html:{id:"address_street"} %>
     <%= f.input :email, required: true, autofocus: true %>
     <%= f.input :password, required: true, hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length) %>
     <%= f.input :password_confirmation, required: true %>

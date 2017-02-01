@@ -1,6 +1,10 @@
 <%= simple_form_for (@user) do |f| %>
 <%= f.input :name %>
 <%= f.input :email %>
+<%= f.input :post_number, autofocus: true, input_html:{id:"address_zipcode"} %>
+<%= f.input :address_prefecture_name, autofocus: true, input_html:{id:"address_prefecture_name"} %>
+<%= f.input :address_city, autofocus: true, input_html:{id:"address_city"} %>
+<%= f.input :address_street, autofocus: true, input_html:{id:"address_street"} %>
 <%= f.collection_radio_buttons :roles, Role.all, :id, :name, {:checked => @user.roles.ids} %>
 <br>
 <%= f.button :submit %>
